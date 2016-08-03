@@ -1,6 +1,6 @@
 # UNDER HEAVY DEVELOPMENT! DO NOT USE!
 
-[![Build Status](https://travis-ci.org/ITDSystems/alvex-workflow-shortcat-dashlet.svg?branch=master)](https://travis-ci.org/ITDSystems/alvex-workflow-shortcat-dashlet)
+[![Build Status](https://travis-ci.org/ITDSystems/alvex-workflow-shortcut-dashlet.svg?branch=master)](https://travis-ci.org/ITDSystems/alvex-workflow-shortcut-dashlet)
 
 Alvex workflow shortcut dashlet
 ========================
