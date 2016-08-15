@@ -5,7 +5,7 @@
 Alvex workflow shortcut dashlet
 ========================
 
-Later
+Alvex dashlet that provides one-click access to start workflows directly from your dashboard.
 
 Build
 -----
