@@ -122,7 +122,8 @@ if (typeof Alvex == "undefined" || !Alvex)
 					removeLink.href = '#';
 					removeLink.innerHTML = '<div style="text-align:right;">' 
 						+ '<img align="top" src="' + Alfresco.constants.URL_RESCONTEXT 
-						+ 'components/workflow-shortcuts-admin/document-delete-16.png' + '"/> ' 
+						+ 'img/components/workflow-shortcuts-admin/document-delete-16.png'
+						+ '"/> ' 
 						+ parent.msg("wsa.button.remove") + '</div>';
 
 					YAHOO.util.Event.addListener(removeLink, "click", function(e)
