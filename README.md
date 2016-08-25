@@ -5,7 +5,7 @@
 Alvex workflow shortcut dashlet
 ========================
 
-Alvex dashlet that provides one-click access to start workflows directly from your dashboard.
+Alvex dashlet that provides one-click access to start workflows directly from your dashboard. Also adds permissions for groups that allows different groups of uses to have different available workflows. For instance, document registration workflow can be available for secretaries only and budget approval workflow only for managers. Permissions are set by administrator and enforced through the whole system.
 
 Build
 -----
