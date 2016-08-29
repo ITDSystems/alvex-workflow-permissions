@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.alvexcore.share</groupId>
     <artifactId>workflow-shortcut-dashlet</artifactId>
-    <version>1.1</version>
+    <version>1.16-SNAPSHOT</version>
     <name>Alvex Workflow Shortcut Dashlet [Share]</name>
     <packaging>${packaging.type}</packaging>
 
