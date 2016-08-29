@@ -11,7 +11,10 @@ cache:
 
 before_script:
     - wget https://raw.githubusercontent.com/ITDSystems/alvex-common/master/scripts/mvn.sh
+    - wget https://raw.githubusercontent.com/ITDSystems/alvex-common/master/scripts/run_integration_tests.sh
     - chmod +x mvn.sh
+    - chmod +x run_integration_tests.sh
+    - base64 -d <<< $MAVEN_DEPLOY_SETTINGS | tar -xz -C $HOME
 
 script:
     - rm -rf $HOME/.m2/repository/com/alvexcore
@@ -19,4 +22,18 @@ script:
     - ./mvn.sh -f repo/pom.xml clean package -P make-jar
     - ./mvn.sh -f share/pom.xml clean package
     - ./mvn.sh -f share/pom.xml clean package -P make-jar
+    - ./run_integration_tests.sh repo
+    - ./run_integration_tests.sh share
 
+after_success:
+    - ./mvn.sh -f repo/pom.xml deploy -P make-jar
+    - ./mvn.sh -f share/pom.xml deploy -P make-jar
+
+
+
+notifications:
+  email:
+    recipients:
+      - alvex-build@itdhq.com
+    on_success: change
+    on_failure: always
