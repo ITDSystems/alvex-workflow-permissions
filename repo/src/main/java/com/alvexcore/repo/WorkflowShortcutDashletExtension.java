@@ -19,17 +19,48 @@
 
 package com.alvexcore.repo;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import org.alfresco.repo.security.authentication.AuthenticationUtil;
+import org.alfresco.repo.security.authentication.AuthenticationUtil.RunAsWork;
+import org.alfresco.service.ServiceRegistry;
+import org.alfresco.service.cmr.security.AuthorityService;
+import org.alfresco.service.cmr.security.AuthorityType;
+
+import com.alvexcore.repo.workflow.activiti.WorkflowPermissionManager;
+
 /**
  * WorkflowShortcutDashlet extension implementation
  */
 
 public class WorkflowShortcutDashletExtension extends RepositoryExtension {
 
+	public static final String ROOT_GROUP_NAME = "alvex_workflow_groups";
+
 	// constructor
 	public WorkflowShortcutDashletExtension() throws Exception {
 		id = "workflow-shortcut-dashlet";
 		fileListPath = "alvex-workflow-shortcut-dashlet-file-list.txt";
 		extInfoPath = "alvex-workflow-shortcut-dashlet.properties";
+	}
+
+	@Override
+	public void init(boolean failIfInitialized) throws Exception {
+		super.init(failIfInitialized);
+		AuthorityService as = serviceRegistry.getAuthorityService();
+		if (!as.authorityExists(as.getName(AuthorityType.GROUP,
+				WorkflowShortcutDashletExtension.ROOT_GROUP_NAME))) {
+			Set<String> zones = new HashSet<String>();
+			zones.add(WorkflowPermissionManager.ZONE_ALVEX);
+			as.createAuthority(AuthorityType.GROUP,
+					WorkflowShortcutDashletExtension.ROOT_GROUP_NAME,
+					WorkflowShortcutDashletExtension.ROOT_GROUP_NAME, zones);
+		}
+	}
+
+	void upgradeConfiguration(String oldVersion, String oldEdition) {
+		//
 	}
 
 }
