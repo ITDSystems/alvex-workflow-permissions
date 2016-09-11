@@ -28,4 +28,4 @@ for(w in wfl_list) {
 	}
 }
 
-model.workflows = allowedWorkflows;
+model.workflowDefinitions = allowedWorkflows;

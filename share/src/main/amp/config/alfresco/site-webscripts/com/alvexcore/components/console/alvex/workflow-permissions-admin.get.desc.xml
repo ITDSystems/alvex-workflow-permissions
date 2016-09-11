@@ -1,0 +1,6 @@
+<webscript>
+	<shortname>Workflow Permissions Administration</shortname>
+	<description>Configure workflow permissions</description>
+	<url>/components/admin/workflow-permissions-admin</url>
+	<family>admin-console</family>
+</webscript>
