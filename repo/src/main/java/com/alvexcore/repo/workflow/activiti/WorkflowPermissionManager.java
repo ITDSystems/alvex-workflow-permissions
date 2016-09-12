@@ -44,7 +44,7 @@ import org.alfresco.service.cmr.security.AuthorityType;
 import org.alfresco.service.cmr.security.PermissionService;
 import org.springframework.beans.factory.InitializingBean;
 
-import com.alvexcore.repo.WorkflowShortcutDashletExtension;
+import com.alvexcore.repo.WorkflowPermissionsExtension;
 
 class GrantPermissionsWork implements RunAsWork<Void> {
 
@@ -90,7 +90,7 @@ class CreateGroupWork implements RunAsWork<Void> {
 		authorityService.createAuthority(AuthorityType.GROUP, groupId, groupId, zones);
 
 		authorityService.addAuthority(authorityService.getName(
-				AuthorityType.GROUP, WorkflowShortcutDashletExtension.ROOT_GROUP_NAME),
+				AuthorityType.GROUP, WorkflowPermissionsExtension.ROOT_GROUP_NAME),
 				authorityService.getName(AuthorityType.GROUP, groupId));
 		return null;
 	}
