@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/ITDSystems/alvex-workflow-shortcut-dashlet.svg?branch=master)](https://travis-ci.org/ITDSystems/alvex-workflow-shortcut-dashlet)
+[![Build Status](https://travis-ci.org/ITDSystems/alvex-workflow-permissions.svg?branch=master)](https://travis-ci.org/ITDSystems/alvex-workflow-permissions)
 
 # Alvex workflow shortcut dashlet
 
