@@ -9,20 +9,20 @@ Features:
 * New dashlet on user and site dashboard to start workflows in one-click.
 * Permissions for groups and orgchart roles to limit access to some business process types. Sample use case: document registration workflow can be available for secretaries only and budget approval workflow only for managers. Permissions are set by administrator and enforced through the whole system.
 
-Compatible with Alfresco 5.1.
+Compatible with Alfresco 5.1 and 5.2.
 
-This component depends on:
+This component requires:
 * [Alvex Utils](https://github.com/ITDSystems/alvex-utils)
 
-# Downloads
+# Using this project
 
-Download ready-to-use Alvex components via [Alvex](https://github.com/ITDSystems/alvex#downloads).
+Recommended way to use Alvex components is to include them as dependencies to your Maven project. Follow [this guide](https://github.com/ITDSystems/alvex#recommended-way-include-alvex-to-your-project-via-maven-configuration) to include this component to your project.
 
 # Build from source
 
 To build Alvex follow [this guide](https://github.com/ITDSystems/alvex#build-component-from-source).
 
-# Use
+# Quick Start
 
 ### Configuring Permission Manager
 
@@ -115,4 +115,4 @@ The first bean describes the stage of the workflow on which the document should 
 ### Configuring permissions to start workflows
 
 Administrator can configure workflows availability for users in admin console:
-![image](http://docs.alvexcore.com/en-US/Alvex/2.1/html-single/Admin_Guide/images/img24.png)
+![image](http://www.alvexcore.com/images/workflow-permissions/1.png)
